@@ -1,0 +1,62 @@
+\documentclass{report}
+\usepackage{CJK}
+\usepackage{amsthm,amsmath,amssymb}
+\usepackage{float}
+\usepackage{pgf,tikz}
+\usepackage{tikz}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\begin{spacing}{1.5}%%行间距
+\CJKindent%段落开头空两格
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{cor}[theorem]{系}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{prop}[theorem]{命题}
+%\newtheorem{solution}[theorem]{解}
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol
+                \renewcommand{\qedsymbol}{$\square$}
+                \begin{proof}[\bfseries\upshape Solution]}
+               {\end{proof}
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}
+
+
+\chapter*{\huge{第九讲 \ 集合论的公理系统}}
+
+集合是一个原始（primitive）概念，没有严格的定义，只有描述。集合论创始人G.Cantor对集合的刻划：“吾人直观或思维之对象，如为相异而确定之物，其总括之全体即谓之集合，其组成此集合之物谓之集合之元素。通常用大写字母表示集合，如A、B、C等，用小写字母表示元素，如a、b、c等。若集合A系由a、b、c等诸元素所组成，则表如A=\{a,b,c...\}，而a为A之元素，亦常用$a\in A$之记号表之者，a非A 之元素，则记如$a \not\in A$。”（肖文灿译于1939年，《集合论初步》，商务印书馆）
+
+例：\{1,2,3\}为集合，自然数之全体为集合。而如甚大之数或与点P接近之点，则不能为集合，因其界限不清。
+
+集合中的元素互异，我们把元素的重复出现看作一次出现，如\{2,2,3,3\}=\{2,3\}。
+既然Cantor教授提到“总括之全体”，那么怎样总括呢？这里有两条重要原则：外延原则：集合由其元素完全决定，$A=B\leftrightarrow \forall x(x\in A \leftrightarrow x\in B)$。
+
+概括原则：对于人们直观或思维之对象x的任一性质P （x），存在集合S 的元素恰为具性质P的那些对象，记为S=\{x|P(x)\}。
+
+从而对任何a，$a\in S\leftrightarrow P(a)$，例：$\{1,2,3\} = \{x|x=1\vee x=2\vee x=3\}$
+\vspace{3ex}
+
+然由\{x|P(x)\}未必产生集合，B.Russell在1902年给出反例，这就是著名的Russell悖论。Russel悖论：令$R=\{x|x\not\in x\}$，从而若R为集合则$R\in R \leftrightarrow R\not\in R$矛盾，故R不为集合。由Russel悖论人们重新审视集合论，修改概括原则，用形式方法讨论集合论，导致公理集合论的产生。
+
+\vspace{3ex}
+
+集合论语言为特殊的一阶语言：
+\begin{enumerate}
+    \item 等词符：$\in$
+    \item 谓词符：$\neg$，$\wedge$，$\vee$，$\rightarrow$
+    \item 常元符：``$($''，``$)$''
+    \item 函数符：
+    \item 变元由：
+\end{enumerate}
+
+
+
+
+%\chapter{}
+\end{spacing}
+\end{CJK*}
+\end{document}
