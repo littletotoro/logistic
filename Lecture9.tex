@@ -47,14 +47,14 @@
     \item[情况2:] $A \in \Gamma$~,与情况1同理可证。
     \item[情况3:] $A \notin \Gamma$~且~$A \notin \Delta$~,在R中将所有的~$\Pi \vdash \Lambda$~由~$\Pi-, \Gamma \vdash \Lambda,\Delta$~而得~$R'$~，这里~$\Pi-'$~为在~$\Pi$~中删去所有的A中直接前辈而得。除了初始~$sequent$~外，~$R'$~将成为一个终于~$\Gamma , \Gamma \vdash \Delta,\Delta$~的证明。对于初始~$sequent$~，~$B \vdash B$~,我们分情况讨论：
         \item[(1)] B不是A的直接前辈
-        
+
         从而在~$R'$~中，~$B \vdash B$~变成~$B,\Gamma \vdash \Delta , B$~
-        
+
         从而【插入图】为~$B,\Gamma \vdash \Delta , B$~的无切证明。
         \item[(2)] B为A的直接前辈，即B为A
-        
+
         从而在~$R'$~中~$B \vdash B$~变成~$\Gamma \vdash \Delta,A$~,而它有无切证明Q。
-        
+
         因此我们可将~$R'$~变成证明~$P^*$~其中无切且终于~$\Gamma \vdash \Delta$~。
 \end{proof}
 
@@ -72,88 +72,88 @@
 若R中仅含若推理，则同理~$\Gamma \vdash \Delta$~可有无切证明。在以上两个假定下，我们对~$d(A)$~归纳来证明。
     \item[情况1:] A为原子的。由引理10.16知结论成立。
     \item[情况2:] A为~$\neg B$~。
-    
+
     我们将构作~$B,\Gamma \vdash \Delta$~的证明~$Q^*$~，~$\Gamma \vdash \Delta.B$~的证明~$R^*$~,从而【插入图】
-    
+
     得~$P^*$~其中最后cut的度为~$d(A)-1$~。
-    
+
         \item[(2.1)] 构作~$Q^*$~如下：
-    
+
         在Q中将每个~$\Pi \vdash \Lambda$~由~$\Pi,B \vdash \Lambda^-$~替代而得~$Q'$~，其中~$\Lambda^-$~由在~$\Lambda$~中删所有切公式A的直接前辈而得。这时~$Q'$~还不是一个合法的证明，问题在于两点:
-           
+
            \item[(a)] Q中~$\neg R$~的推理：
-        
+
            【插入图】
-        
+
             变成~$Q'$~中的
-        
+
             【插入图】
-        
+
             然而只需要变成~$Q'$~中的
-        
+
             【插入图】
-        
+
             就合法了。
            \item[(b)] 对于Q中的初始~$sequent$~~$C \vdash C$~(C为原子的)，在~$Q'$~中变为~$B,C \vdash C$~，而这可由
-            
+
             【插入图】
-            
+
             而得。
-            
+
             这样我们可构作~$B,\Gamma \vdash \Delta$~的证明~$Q^*$~其中任何cut的度未变。
-            
+
         \item[(2.2)] 同理构作~$\Gamma \vdash \Delta,B$~的证明~$R^*$~其中任何cut的度未变。
     \item[情况3:] A为~$B \vee C$~
         \item[(3.1)] 从Q构作~$\Gamma \vdash \Delta,B,C$~的证明~$Q^*$~。在Q中将每个~$\Pi \vdash \Delta$~由~$\Pi,\Lambda^-,B,C$~替代而得~$Q'$~，这里~$\Lambda^-$~由在~$\Lambda$~中删去所有切公式的直接前辈而得。这时~$Q'$~还不是一个合法的证明，问题在于两点：
             \item[(a)] Q中的VR推理
-            
+
             【插入图】
-            
+
             变成~$Q'$~中的
-            
+
             【插入图】
-            
+
             而这可以删去此推理。
             \item[(b)] 对于初始~$sequent$~ ~$E \vdash E$~(E为原子的)
-            
+
             在~$G'$~中变成~$E \vdash E,B,C$~，而这可修正为
-            
+
             【插入图】
-            
+
             这样我们可构作~$\Gamma \vdash \Delta,B,C$~的证明~$Q^*$~其中任何cut的度未变。
         \item[(3.2)] 从R构作~$B,\Gamma \vdash \Delta$~的证明~$R_B$~。
-        
+
         在R中将每个~$\Pi \vdash \Delta$~由~$B,\Pi^- \vdash \Delta$~替代而得~$R'_B$~，这里~$\Pi^-$~由在~$\Pi$~中删去所有切公式A的直接前辈而得。这时~$R'_B$~还不是一个合法的证明，问题在于两点：
             \item[(a)] R中的VL推理：
-            
+
             【插入图】
-            
+
             变成~$R'_B$~中的
-            
+
             【插入图】
-            
+
             而这可删去以~$C,\Pi^- \vdash \Lambda$~为根的子树。
-            
+
             \item[(b)] 对于初始~$sequent$~~$E \vdash E$~，在~$R'_B$~变成~$B,E \vdash E$~，而这由~$E \vdash E$~即得。
-                
+
                 这样我们可从~$R'_B$~构作合法的~$B,\Gamma \vdash \Delta$~的证明~$R_B$~其中任何cut的度未变。
-        
+
         \item[(3.3)] 同理可构作~$C,\Gamma \vdash \Delta$~的证明~$R_C$~其中任何cut的度未变。
         \item[(3.4)] 构作~$P^*$~如下：
-        
+
         【插入图】
-        
+
         这样~$P^*$~为~$\Gamma \vdash \Delta$~的证明且~$P^*$~中cut的度皆小于~$d(A)$~。
     \item[情况4:] 当A为~$B \vee C,B \rightarrow C$~时，同理可证。
     \item[情况5:] 当A为~$\exists x.B(x)$~：
         \item[5.1)] 在Q中，~$\exists x.B(x)$~的引入只能有两种方式：由弱规则和~$\exists R$~规则。设在G中总共存在~$k(\geq 0)$~个~$\exists R$~推理规则使它们的主公式为切公式~$\exists x.B(x)$~的直接前辈，令它们为
-            
+
             【插入图】
-            
+
         \item[5.2)] 同样，设在G中总共存在~$l(\geq 0)$~个~$\exists L$~推理规则使它们的主公式为切公式~$\exists x.B(x)$~的直接前辈，令它们为
-            
+
             【插入图】
-            
+
         \item[5.3)] 对于每个~$i \leq k$~，构作~$B(t_i),\Gamma \vdash \Delta$~的证明~$R_i$~。在R中进行如下操作：
             \item[(a)] 在R中~$a_j(j \leq l)$~的每个出现皆由~$t_i$~替代；
             \item[(b)] 在R中切公式~$\exists x B(x)$~的每个直接前辈由~$B(t_i)$~替代；
@@ -161,10 +161,67 @@
             这样就得到~$R_i$~。P的正则性保证以上操作不影响R中的特征变元条件。
         \item[5.4)] 在Q中每个~$\Pi \vdash \Lambda$~由~$\Pi,\Gamma \vdash \Delta,\Lambda^-$~替代，这里~$\Lambda^-$~由在~$\Lambda$~中删去所有切公式A的直接前辈而得。这样构作了树~$Q'$~，这时~$Q'$~并非为合法的证明。对~$Q'$~作如下操作后，其成为~$\Gamma \vdash \Delta$~的证明~$P^*$~：
             \item[(a)] 对于~$Q'$~的初始~$sequent$~~$E,\Gamma \vdash \Delta,E$~，只需加上
+
+            【插入图】
+            
+            后就成合法证明；
+            \item[(b)] 对于Q中的第i个~$\exists R$~推理，它在~$Q'$~变为
             
             【插入图】
+            
+            而这可由以下推理替代成合法证明：
+            
+            【插入图】
+            
+            注意此cut的度为~$d(A) - 1$~.
+            \item[(c)] ~$Q'$~的终~$sequent$~为~$\Gamma,\Gamma \vdash \Delta,\Delta$~，这只需要加上
+            
+            【插入图】
+            
+            后就成合法证明。
+            
+            这样的~$P^*$~为~$\Gamma \vdash \Delta$~的证明其中所有的切公式的度皆小于~$d(A)$~。
+            
+            归纳完成。
 \end{proof}
 
+\begin{lemma}
+若P为~$\Gamma \vdash \Delta$~的证明其中所有cut的度~$\leqslant d$~，则存在~$\Gamma \vdash \Delta$~的证明~$P^*$~其中所有cut的度~$<d$~。
+\end{lemma}
+
+\begin{proof}[证:]
+令k为P中度为d的cut的个数。对k归纳证明结论如下：
+
+奠基：~$k=0$~，易见结论真。
+
+归纳假定(~$I.H.$~): 设~$k \leqslant n$~时，结论成立。
+
+归纳步骤：~$k=n+1$~，不妨设P终于度为~$n+1$~的cut推理：
+
+【插入图】
+
+因为Q和R中度为d的cut的个数各自皆~$\leqslant k$~，故由~$I.H.$~知存在~$\Gamma \vdash \Delta,A$~的证明~$Q^*$~和~$A,\Gamma \vdash \Delta$~的证明~$R^*$~其中所有cut的度~$<d$~，从而构作~$P'$~为
+
+【插入图】
+
+再由引理10.17知结论成立。
+\end{proof}
+
+\begin{proof}[~$Hauptsatz$~的证明:]
+
+设P为~$\Gamma \vdash \Delta$~的证明，令~$d(P)=max\{d(A)|$~A为P中出现的切公式~$\}$~。对于~$d(P)$~归纳来证~$\Gamma \vdash \Delta$~有一个无切证明。
+
+奠基：~$d(P)=1$~，从而P中所有的切公式皆为原子的，由引理10.16知~$\Gamma \vdash \Delta$~有一个无切证明。
+
+归纳假定：~$d(P) \leqslant l$~时结论成立。
+
+归纳步骤：~$d(P)=l+1$~，由引理10.18知存在~$\Gamma \vdash \Delta$~的证明~$P^*$~且~$d(P^*) \leqslant l$~，从而由~$I.H.$~知~$\Gamma \vdash \Delta$~有一个无切证明。
+
+\end{proof}
+
+这样就完成~$Hauptsatz$~的证明，该定理有许多重要的推论，如~$Craig$~定理，~$Robinson$~定理等（参见~$Takeuti[]$~）。
+
+\chapter*{\huge{习题 \ }}
 
 
 例：\{1,2,3\}为集合，自然数之全体为集合。而如甚大之数或与点P接近之点，则不能为集合，因其界限不清。
