@@ -223,29 +223,18 @@
 
 \chapter*{\huge{习题 \ }}
 
-
-例：\{1,2,3\}为集合，自然数之全体为集合。而如甚大之数或与点P接近之点，则不能为集合，因其界限不清。
-
-集合中的元素互异，我们把元素的重复出现看作一次出现，如\{2,2,3,3\}=\{2,3\}。
-既然Cantor教授提到“总括之全体”，那么怎样总括呢？这里有两条重要原则：外延原则：集合由其元素完全决定，$A=B\leftrightarrow \forall x(x\in A \leftrightarrow x\in B)$。
-
-概括原则：对于人们直观或思维之对象x的任一性质P （x），存在集合S 的元素恰为具性质P的那些对象，记为S=\{x|P(x)\}。
-
-从而对任何a，$a\in S\leftrightarrow P(a)$，例：$\{1,2,3\} = \{x|x=1\vee x=2\vee x=3\}$
-\vspace{3ex}
-
-然由\{x|P(x)\}未必产生集合，B.Russell在1902年给出反例，这就是著名的Russell悖论。Russel悖论：令$R=\{x|x\not\in x\}$，从而若R为集合则$R\in R \leftrightarrow R\not\in R$矛盾，故R不为集合。由Russel悖论人们重新审视集合论，修改概括原则，用形式方法讨论集合论，导致公理集合论的产生。
-
-\vspace{3ex}
-
-集合论语言为特殊的一阶语言：
 \begin{enumerate}
-    \item 等词符：$\in$
-    \item 谓词符：$\neg$，$\wedge$，$\vee$，$\rightarrow$
-    \item 常元符：``$($''，``$)$''
-    \item 函数符：
-    \item 变元由：
+    \item 在LK中将公理替换为~$\Gamma,A,\Delta \vdash \Pi,A,\Lambda$~(这里A为任何公式)而得系统~$LK'$~，证明。
+    \item 在LK的一个证明中，若C为D的前辈，则C为D的子公式。
+    \item 在LK中，给出~$\forall xA(x) \rightarrow B \vdash \exists x(A(x) \rightarrow B)$~的无切证明，这里~$A(a)$~和B互异且皆为原子的。
+    \item 证明命题10.10。
+    \item 设规则~$mix$~(相对A)为：【插入图】，证明~$LK-\{cut\} + mix$~等价于LK。
+    \item 证明空~$sequent \vdash$~在LK中不可证。
+    \item 证明~$P(a) \vdash Q(a)$~在LK中不可证。
+    \item 在LK中给出~$A \rightarrow (B \rightarrow C) \vdash B \rightarrow (A \rightarrow C)$~的两个证明，其中一个有cut，而另一个无cut。
 \end{enumerate}
+
+
 
 
 
