@@ -28,7 +28,7 @@
 
 \chapter*{\huge{第X讲 \ }}
 
-下面我们证明Gentzende的Hauptsatz:
+下面我们证明~$Gentzende$~的~$Hauptsatz$:
 
 \begin{theorem}
 若~$\Gamma\vdash\Delta$~在LK中有一证明，则~$\Gamma\vdash\Delta$~在LK中有一无切证明。
@@ -37,15 +37,20 @@
 我们先证明一些引理：
 
 \begin{lemma}
-设~$\Gamma\vdash\Delta$~的证明P呈形于【插入图】
+设~$\Gamma\vdash\Delta$~的证明P呈形于
+
+【插入图】
 
 若A为原子公式且Q与R分别为~$\Gamma\vdash\Delta$~，A与A，~$\Gamma\vdash\Delta$~的无切证明，则存在~$\Gamma\vdash\Delta$~的一个无切证明。
 \end{lemma}
 
 \begin{proof}[证:]
+
+    \begin{enumerate}
     \item[情况1:] $A \in \Delta$~，设~$\Delta$~为~$\Delta_1,A,\Delta_2$~从而【插入图】。即为~$\Gamma \vdash \Delta$~的无切证明。
     \item[情况2:] $A \in \Gamma$~,与情况1同理可证。
     \item[情况3:] $A \notin \Gamma$~且~$A \notin \Delta$~,在R中将所有的~$\Pi \vdash \Lambda$~由~$\Pi-, \Gamma \vdash \Lambda,\Delta$~而得~$R'$~，这里~$\Pi-'$~为在~$\Pi$~中删去所有的A中直接前辈而得。除了初始~$sequent$~外，~$R'$~将成为一个终于~$\Gamma , \Gamma \vdash \Delta,\Delta$~的证明。对于初始~$sequent$~，~$B \vdash B$~,我们分情况讨论：
+        \begin{enumerate}
         \item[(1)] B不是A的直接前辈
 
         从而在~$R'$~中，~$B \vdash B$~变成~$B,\Gamma \vdash \Delta , B$~
@@ -56,6 +61,8 @@
         从而在~$R'$~中~$B \vdash B$~变成~$\Gamma \vdash \Delta,A$~,而它有无切证明Q。
 
         因此我们可将~$R'$~变成证明~$P^*$~其中无切且终于~$\Gamma \vdash \Delta$~。
+        \end{enumerate}
+    \end{enumerate}
 \end{proof}
 
 \begin{lemma}
@@ -70,6 +77,7 @@
 首先我们可假定Q与R中的每个皆含至少一个强推理规则，这是因为若Q中仅含弱推理，则~$A \in \Gamma$~或有B使~$B \in \Gamma$~且~$B \in \Delta$~，从而~$\Gamma \vdash \Delta$~可有无切证明。
 
 若R中仅含若推理，则同理~$\Gamma \vdash \Delta$~可有无切证明。在以上两个假定下，我们对~$d(A)$~归纳来证明。
+    \begin{enumerate}
     \item[情况1:] A为原子的。由引理10.16知结论成立。
     \item[情况2:] A为~$\neg B$~。
 
@@ -77,41 +85,47 @@
 
     得~$P^*$~其中最后cut的度为~$d(A)-1$~。
 
+        \begin{enumerate}
         \item[(2.1)] 构作~$Q^*$~如下：
 
         在Q中将每个~$\Pi \vdash \Lambda$~由~$\Pi,B \vdash \Lambda^-$~替代而得~$Q'$~，其中~$\Lambda^-$~由在~$\Lambda$~中删所有切公式A的直接前辈而得。这时~$Q'$~还不是一个合法的证明，问题在于两点:
 
-           \item[(a)] Q中~$\neg R$~的推理：
+            \begin{enumerate}
+            \item[(a)] Q中~$\neg R$~的推理：
 
-           【插入图】
+           $\frac{B,\Pi \vdash \Lambda}{\Pi \vdash \Lambda.\neg R}$
 
             变成~$Q'$~中的
 
-            【插入图】
+            $\frac{B,\Pi,B \vdash \Lambda^-}{\Pi,B \vdash \Lambda^-}$
 
             然而只需要变成~$Q'$~中的
 
             【插入图】
 
             就合法了。
-           \item[(b)] 对于Q中的初始~$sequent$~~$C \vdash C$~(C为原子的)，在~$Q'$~中变为~$B,C \vdash C$~，而这可由
+            \item[(b)] 对于Q中的初始~$sequent$~~$C \vdash C$~(C为原子的)，在~$Q'$~中变为~$B,C \vdash C$~，而这可由
 
-            【插入图】
+            $\frac{C \vdash C}{B,C \vdash C} WL$
 
             而得。
 
             这样我们可构作~$B,\Gamma \vdash \Delta$~的证明~$Q^*$~其中任何cut的度未变。
+            \end{enumerate}
 
         \item[(2.2)] 同理构作~$\Gamma \vdash \Delta,B$~的证明~$R^*$~其中任何cut的度未变。
+        \end{enumerate}
     \item[情况3:] A为~$B \vee C$~
+        \begin{enumerate}
         \item[(3.1)] 从Q构作~$\Gamma \vdash \Delta,B,C$~的证明~$Q^*$~。在Q中将每个~$\Pi \vdash \Delta$~由~$\Pi,\Lambda^-,B,C$~替代而得~$Q'$~，这里~$\Lambda^-$~由在~$\Lambda$~中删去所有切公式的直接前辈而得。这时~$Q'$~还不是一个合法的证明，问题在于两点：
+            \begin{enumerate}
             \item[(a)] Q中的VR推理
 
-            【插入图】
+            $\frac{\Pi \vdash \Lambda,B,C}{\Pi \vdash ,B \vee C}VR$
 
             变成~$Q'$~中的
 
-            【插入图】
+            $\frac{\Pi \vdash \Lambda^-,B,C}{\Pi \vdash \Lambda^-,B,C}$
 
             而这可以删去此推理。
             \item[(b)] 对于初始~$sequent$~ ~$E \vdash E$~(E为原子的)
@@ -121,22 +135,25 @@
             【插入图】
 
             这样我们可构作~$\Gamma \vdash \Delta,B,C$~的证明~$Q^*$~其中任何cut的度未变。
+            \end{enumerate}
         \item[(3.2)] 从R构作~$B,\Gamma \vdash \Delta$~的证明~$R_B$~。
 
         在R中将每个~$\Pi \vdash \Delta$~由~$B,\Pi^- \vdash \Delta$~替代而得~$R'_B$~，这里~$\Pi^-$~由在~$\Pi$~中删去所有切公式A的直接前辈而得。这时~$R'_B$~还不是一个合法的证明，问题在于两点：
+            \begin{enumerate}
             \item[(a)] R中的VL推理：
 
-            【插入图】
+            $\frac{{B,\Pi \vdash \Lambda}  {C,\Pi \vdash \Lambda}}{B \vee C,\Pi \vdash \Lambda}$
 
             变成~$R'_B$~中的
 
-            【插入图】
+            $\frac{{B,\Pi \vdash \Lambda},{C,\Pi^- \vdash \Lambda}}{B,\Pi^- \vdash \Lambda}$
 
             而这可删去以~$C,\Pi^- \vdash \Lambda$~为根的子树。
 
             \item[(b)] 对于初始~$sequent$~~$E \vdash E$~，在~$R'_B$~变成~$B,E \vdash E$~，而这由~$E \vdash E$~即得。
 
                 这样我们可从~$R'_B$~构作合法的~$B,\Gamma \vdash \Delta$~的证明~$R_B$~其中任何cut的度未变。
+            \end{enumerate}
 
         \item[(3.3)] 同理可构作~$C,\Gamma \vdash \Delta$~的证明~$R_C$~其中任何cut的度未变。
         \item[(3.4)] 构作~$P^*$~如下：
@@ -144,45 +161,53 @@
         【插入图】
 
         这样~$P^*$~为~$\Gamma \vdash \Delta$~的证明且~$P^*$~中cut的度皆小于~$d(A)$~。
+        \end{enumerate}
     \item[情况4:] 当A为~$B \vee C,B \rightarrow C$~时，同理可证。
     \item[情况5:] 当A为~$\exists x.B(x)$~：
+        \begin{enumerate}
         \item[5.1)] 在Q中，~$\exists x.B(x)$~的引入只能有两种方式：由弱规则和~$\exists R$~规则。设在G中总共存在~$k(\geq 0)$~个~$\exists R$~推理规则使它们的主公式为切公式~$\exists x.B(x)$~的直接前辈，令它们为
 
-            【插入图】
+            $\frac{\Pi_i \vdash \Lambda_i,B(t_i)}{\Pi_i \vdash \Lambda_i,\exists x B(x)}$
 
         \item[5.2)] 同样，设在G中总共存在~$l(\geq 0)$~个~$\exists L$~推理规则使它们的主公式为切公式~$\exists x.B(x)$~的直接前辈，令它们为
 
-            【插入图】
+            $\frac{B(a_j),\Pi'_j \vdash \Lambda'_j}{\exists x B(x),\Pi'_j \vdash \Lambda'_j}(j=1,2,...,l)$
 
         \item[5.3)] 对于每个~$i \leq k$~，构作~$B(t_i),\Gamma \vdash \Delta$~的证明~$R_i$~。在R中进行如下操作：
+            \begin{enumerate}
             \item[(a)] 在R中~$a_j(j \leq l)$~的每个出现皆由~$t_i$~替代；
             \item[(b)] 在R中切公式~$\exists x B(x)$~的每个直接前辈由~$B(t_i)$~替代；
             \item[(c)] 删去这些~$l$~个~$\exists L$~推理。
             这样就得到~$R_i$~。P的正则性保证以上操作不影响R中的特征变元条件。
+            \end{enumerate}
         \item[5.4)] 在Q中每个~$\Pi \vdash \Lambda$~由~$\Pi,\Gamma \vdash \Delta,\Lambda^-$~替代，这里~$\Lambda^-$~由在~$\Lambda$~中删去所有切公式A的直接前辈而得。这样构作了树~$Q'$~，这时~$Q'$~并非为合法的证明。对~$Q'$~作如下操作后，其成为~$\Gamma \vdash \Delta$~的证明~$P^*$~：
+            \begin{enumerate}
             \item[(a)] 对于~$Q'$~的初始~$sequent$~~$E,\Gamma \vdash \Delta,E$~，只需加上
 
-            【插入图】
-            
+            $\frac{E \vdash E}{E,\Gamma \vdash \Delta,E}$
+
             后就成合法证明；
             \item[(b)] 对于Q中的第i个~$\exists R$~推理，它在~$Q'$~变为
-            
-            【插入图】
-            
+
+            $\frac{\Pi_i,\Gamma \vdash \Delta,\Lambda_i,B(t_i)}{\Pi_i,\Gamma \vdash \Delta,\Lambda_i}$
+
             而这可由以下推理替代成合法证明：
-            
+
             【插入图】
-            
+
             注意此cut的度为~$d(A) - 1$~.
             \item[(c)] ~$Q'$~的终~$sequent$~为~$\Gamma,\Gamma \vdash \Delta,\Delta$~，这只需要加上
-            
+
             【插入图】
-            
+
             后就成合法证明。
-            
+
+            \end{enumerate}
             这样的~$P^*$~为~$\Gamma \vdash \Delta$~的证明其中所有的切公式的度皆小于~$d(A)$~。
-            
+
             归纳完成。
+        \end{enumerate}
+    \end{enumerate}
 \end{proof}
 
 \begin{lemma}
